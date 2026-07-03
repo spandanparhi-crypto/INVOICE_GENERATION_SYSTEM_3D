@@ -147,24 +147,6 @@ Print or download the invoice.
 
 ---
 
-# 📸 Screenshots
-
-Store screenshots inside the **screenshots** folder.
-
-Example:
-
-```markdown
-![Home](screenshots/home.png)
-
-![Invoice](screenshots/invoice.png)
-
-![Preview](screenshots/preview.png)
-
-![Mobile](screenshots/mobile.png)
-```
-
----
-
 # 💻 Installation
 
 Clone the repository
