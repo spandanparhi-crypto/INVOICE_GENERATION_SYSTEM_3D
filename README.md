@@ -19,7 +19,7 @@
 
 🚀 **Try the Project**
 
-**https://grateful-magenta-hsj7ok6w.edgeone.dev/**
+**(https://zealous-apricot-rhawivur.edgeone.dev/)**
 
 ---
 
