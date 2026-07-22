@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>3D Animated Invoice Dashboard</title>
+<!-- Google Fonts & FontAwesome for Premium Icons -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<!-- Three.js Library for 3D Background -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- Interactive 3D Canvas Background -->
+<div id="canvas-container"></div>
+
+<div class="container">
+    <h1><i class="fa-solid fa-file-invoice-dollar"></i> Invoice Generation System</h1>
+    
+    <!-- Meta details section -->
+    <div class="row">
+        <div class="input-group">
+            <i class="fa-solid fa-user"></i>
+            <input id="customer" placeholder="Customer Name">
+        </div>
+        <div class="input-group">
+            <i class="fa-solid fa-hashtag"></i>
+            <input id="invoice" readonly>
+        </div>
+        <div class="input-group">
+            <i class="fa-solid fa-calendar-days"></i>
+            <input id="date" type="date">
+        </div>
+    </div>
+
+    <!-- Main dynamic table -->
+    <div class="table-wrapper">
+        <table id="tbl">
+            <thead>
+                <tr>
+                    <th>Product Item</th>
+                    <th>Qty</th>
+                    <th>Price (₹)</th>
+                    <th>GST %</th>
+                    <th>Total (₹)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><input class="product-name" placeholder="Enter Product Name"></td>
+                    <td><input type="number" value="1" min="1" oninput="calc()"></td>
+                    <td><input type="number" value="0" min="0" oninput="calc()"></td>
+                    <td><input type="number" value="18" min="0" oninput="calc()"></td>
+                    <td class="t">0.00</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- UI Interaction Handles -->
+    <div class="actions">
+        <button class="btn-add" onclick="addRow()"><i class="fa-solid fa-plus"></i> Add Item</button>
+        <button class="btn-calc" onclick="calc()"><i class="fa-solid fa-calculator"></i> Recalculate</button>
+        <button class="btn-print" onclick="window.print()"><i class="fa-solid fa-print"></i> Print Invoice</button>
+    </div>
+
+    <div class="total-wrapper">
+        <div class="total">Grand Total: <span>₹<span id="grand">0.00</span></span></div>
+    </div>
+</div>
+
+<script src="js/script.js"></script>
+</body>
+</html>
